@@ -1,0 +1,18 @@
+# 個人情報を含むサンプル販売図面・生成レポート（公開リポジトリに含めない）
+*.pdf
+
+# 依存・ビルド成果物
+node_modules/
+dist/
+dist-ssr/
+
+# OS / エディタ
+.DS_Store
+*.local
+.vscode/*
+!.vscode/extensions.json
+.idea
+
+# デプロイ
+.vercel
+.netlify

@@ -1,0 +1,15 @@
+# Netlify 用設定（このディレクトリ app/ をプロジェクトルートに指定してデプロイ）
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# SPA フォールバック
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

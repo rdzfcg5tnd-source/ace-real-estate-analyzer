@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@500;700&family=Roboto+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root {
+    height: 100%;
+  }
+  body {
+    @apply bg-ink-900 text-champagne font-sans antialiased;
+    background-image: radial-gradient(1200px 600px at 80% -10%, rgba(201, 162, 75, 0.06), transparent 60%),
+      radial-gradient(900px 500px at -10% 110%, rgba(201, 162, 75, 0.04), transparent 60%);
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-ink-800/80 border border-white/5 rounded-xl shadow-lux backdrop-blur-sm;
+  }
+  .label {
+    @apply text-xs uppercase tracking-[0.18em] text-champagne/50;
+  }
+  .field {
+    @apply w-full bg-ink-700 border border-white/10 rounded-lg px-3 py-2 text-champagne
+      placeholder:text-champagne/25 focus:outline-none focus:border-gold/60 focus:ring-1
+      focus:ring-gold/30 transition font-mono;
+  }
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 font-medium
+      bg-gradient-to-b from-gold-light to-gold-dark text-ink-900 shadow-glow
+      hover:from-gold hover:to-gold-dark transition disabled:opacity-40 disabled:cursor-not-allowed;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 font-medium
+      border border-white/10 text-champagne/80 hover:border-gold/40 hover:text-champagne transition;
+  }
+  .gold-text {
+    @apply bg-gradient-to-r from-gold-light to-gold bg-clip-text text-transparent;
+  }
+}
+
+/* react-pdf */
+.react-pdf__Page__canvas {
+  margin: 0 auto;
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto !important;
+}
+
+/* scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: #0a0a0b; }
+::-webkit-scrollbar-thumb { background: #26262d; border-radius: 8px; border: 2px solid #0a0a0b; }
+::-webkit-scrollbar-thumb:hover { background: #3a3a44; }

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0a0b"/>
+      <stop offset="100%" stop-color="#17171b"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e6cd8a"/>
+      <stop offset="100%" stop-color="#c9a24b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="980" cy="-40" r="320" fill="#c9a24b" opacity="0.06"/>
+  <circle cx="120" cy="700" r="260" fill="#c9a24b" opacity="0.05"/>
+  <rect x="40" y="40" width="1120" height="550" rx="20" fill="none" stroke="#c9a24b" stroke-width="1.5" opacity="0.3"/>
+  <text x="100" y="250" font-family="Georgia, serif" font-size="92" font-weight="700" fill="url(#gold)">ACE 不動産投資分析</text>
+  <text x="104" y="330" font-family="sans-serif" font-size="40" fill="#e8e2d4" opacity="0.85">販売図面PDFから 利回り・IRR・税引後ROI を自動計算</text>
+  <g font-family="monospace" font-size="34" fill="#e6cd8a">
+    <text x="104" y="470">表面利回り</text>
+    <text x="430" y="470">実質利回り</text>
+    <text x="756" y="470">IRR</text>
+    <text x="980" y="470">ROI</text>
+  </g>
+  <text x="104" y="540" font-family="sans-serif" font-size="28" fill="#e8e2d4" opacity="0.5">画像はブラウザ内で処理・外部送信なし ／ 無料・登録不要</text>
+</svg>
