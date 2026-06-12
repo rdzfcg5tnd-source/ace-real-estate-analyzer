@@ -66,7 +66,7 @@ export default function PdfViewer({ file, fileName, onPick }: Props) {
               ⌘
             </div>
             <p className="text-sm">レインズで取得した販売図面PDFを選択してください</p>
-            <p className="text-xs text-champagne/25">図面を見ながら右側に項目を入力します</p>
+            <p className="text-xs text-champagne/25">図面を見ながら項目を入力します</p>
           </div>
         )}
       </div>

@@ -117,18 +117,18 @@ export default function App() {
   return (
     <div className="h-full flex flex-col">
       {/* ヘッダー */}
-      <header className="border-b border-white/5 px-6 py-4 flex items-center justify-between bg-ink-900/60 backdrop-blur">
-        <div className="flex items-baseline gap-3">
-          <h1 className="font-serif text-xl tracking-wide">
+      <header className="border-b border-white/5 px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between gap-3 bg-ink-900/60 backdrop-blur">
+        <div className="flex items-baseline gap-3 min-w-0">
+          <h1 className="font-serif text-lg sm:text-xl tracking-wide leading-tight">
             <span className="gold-text">ACE</span>
             <span className="text-champagne/90"> 不動産投資分析</span>
           </h1>
-          <span className="text-xs text-champagne/30 tracking-widest uppercase">Investment Analyzer</span>
+          <span className="hidden md:inline text-xs text-champagne/30 tracking-widest uppercase">Investment Analyzer</span>
         </div>
         {/* ビュー切替タブ */}
-        <div className="flex items-center gap-1 bg-ink-700/60 rounded-lg p-1 border border-white/5">
+        <div className="flex items-center gap-1 bg-ink-700/60 rounded-lg p-1 border border-white/5 shrink-0">
           <button
-            className={`px-4 py-1.5 rounded-md text-sm transition ${
+            className={`px-3 sm:px-4 py-1.5 rounded-md text-sm whitespace-nowrap transition ${
               view === 'analysis' ? 'bg-gold/15 text-gold-light' : 'text-champagne/50 hover:text-champagne'
             }`}
             onClick={() => setView('analysis')}
@@ -136,7 +136,7 @@ export default function App() {
             分析
           </button>
           <button
-            className={`px-4 py-1.5 rounded-md text-sm transition ${
+            className={`px-3 sm:px-4 py-1.5 rounded-md text-sm whitespace-nowrap transition ${
               view === 'compare' ? 'bg-gold/15 text-gold-light' : 'text-champagne/50 hover:text-champagne'
             }`}
             onClick={() => setView('compare')}
@@ -147,7 +147,7 @@ export default function App() {
       </header>
 
       {/* 本体 */}
-      <div className="flex-1 flex gap-5 p-5 overflow-hidden">
+      <div className="flex-1 flex flex-col lg:flex-row gap-4 lg:gap-5 p-4 lg:p-5 overflow-auto lg:overflow-hidden">
         <PropertyList
           properties={properties}
           activeId={activeId}
@@ -159,7 +159,7 @@ export default function App() {
           onDelete={handleDelete}
         />
 
-        <main className="flex-1 flex flex-col gap-5 overflow-auto pr-1">
+        <main className="flex-1 flex flex-col gap-4 lg:gap-5 lg:overflow-auto lg:pr-1">
           {view === 'analysis' ? (
             <>
               <OcrBanner ocr={ocr} onRerun={handleRerunOcr} hasPdf={!!draft.pdfData} />

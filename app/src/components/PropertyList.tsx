@@ -12,12 +12,12 @@ interface Props {
 
 export default function PropertyList({ properties, activeId, onSelect, onNew, onDelete }: Props) {
   return (
-    <aside className="w-72 shrink-0 flex flex-col gap-4 h-full">
+    <aside className="w-full lg:w-72 lg:shrink-0 flex flex-col gap-3 lg:gap-4 lg:h-full">
       <button className="btn-gold w-full" onClick={onNew}>
         ＋ 新規分析
       </button>
 
-      <div className="card flex-1 overflow-auto">
+      <div className="card overflow-auto max-h-60 lg:max-h-none lg:flex-1">
         <div className="px-4 py-3 border-b border-white/5 label">保存済み物件</div>
         {properties.length === 0 ? (
           <div className="p-4 text-sm text-champagne/30">まだ物件がありません</div>
@@ -42,7 +42,7 @@ export default function PropertyList({ properties, activeId, onSelect, onNew, on
                       <div className="text-xs text-champagne/40 truncate">{p.address || '—'}</div>
                     </div>
                     <button
-                      className="opacity-0 group-hover:opacity-100 text-champagne/30 hover:text-red-400 transition text-xs"
+                      className="opacity-100 lg:opacity-0 lg:group-hover:opacity-100 text-champagne/40 lg:text-champagne/30 hover:text-red-400 transition text-base lg:text-xs px-1"
                       onClick={(e) => {
                         e.stopPropagation()
                         onDelete(p.id)

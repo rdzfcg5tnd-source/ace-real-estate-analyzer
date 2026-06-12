@@ -33,10 +33,10 @@ function Metric({
 export default function ResultsPanel({ result, property }: { result: AnalysisResult; property: Property }) {
   const r = result
   return (
-    <div className="card p-5 space-y-6">
-      <div className="flex items-center gap-3">
-        <span className="text-gold font-serif text-lg">投資分析結果</span>
-        <div className="flex-1 h-px bg-gradient-to-r from-gold/30 to-transparent" />
+    <div className="card p-4 sm:p-5 space-y-6">
+      <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+        <span className="text-gold font-serif text-lg whitespace-nowrap">投資分析結果</span>
+        <div className="flex-1 min-w-[1rem] h-px bg-gradient-to-r from-gold/30 to-transparent" />
         <button className="btn-ghost text-xs py-1.5" onClick={() => exportExcel(property)}>
           ⤓ Excel
         </button>
