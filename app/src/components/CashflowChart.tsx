@@ -42,7 +42,7 @@ export default function CashflowChart({ schedule }: { schedule: CashflowRow[] })
             borderRadius: 8,
             color: '#e8e2d4',
           }}
-          formatter={(v: number) => [man(v * 10000), '']}
+          formatter={(v) => [man(Number(v) * 10000), '']}
         />
         <ReferenceLine y={0} stroke="rgba(255,255,255,0.2)" />
         <Bar dataKey="キャッシュフロー" fill="url(#cfBar)" radius={[3, 3, 0, 0]} maxBarSize={36} />
