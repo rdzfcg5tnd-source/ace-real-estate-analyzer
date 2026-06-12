@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e6cd8a"/>
+      <stop offset="100%" stop-color="#9c7a32"/>
+    </linearGradient>
+  </defs>
+  <!-- 全面塗り（maskable対応：縁まで背景） -->
+  <rect width="512" height="512" fill="#0a0a0b"/>
+  <!-- 安全領域内の枠線 -->
+  <rect x="96" y="96" width="320" height="320" rx="56" fill="none" stroke="url(#g)" stroke-width="4" opacity="0.45"/>
+  <!-- モノグラム A（安全領域 ~70% 内に収める） -->
+  <path d="M256 128 L372 392 L318 392 L294 330 L218 330 L194 392 L140 392 Z M236 282 L276 282 L256 214 Z" fill="url(#g)"/>
+</svg>
